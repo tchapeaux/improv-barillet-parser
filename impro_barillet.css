@@ -1,0 +1,13 @@
+impro { display: table; border: solid 1px; padding: 10px; margin: 10px; page-break-inside:avoid; }
+nature::before {content: "Nature: "; }
+nature { display: table-row; border: solid 1px; }
+titre::before {content: "Titre: "; }
+titre { display: table-row; border: solid 1px; }
+nbj::before {content: "NbJ: "; }
+nbj { display: table-row; border: solid 1px; }
+cate::before {content: "Caté: "; }
+cate { display: table-row; border: solid 1px; }
+duree::before {content: "Durée: "; }
+duree { display: table-row; border: solid 1px; }
+divers::before {content: ""; }
+divers { display: table-row; border: solid 1px; }
