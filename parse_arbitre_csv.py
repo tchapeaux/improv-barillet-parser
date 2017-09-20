@@ -28,7 +28,7 @@ impros = []
 with codecs.open(sys.argv[1], "r", "utf-8") as f:
     for line in [l.strip() for l in f.readlines() if len(l.strip()) > 0]:
         line = line.split(";")
-        impros.append(Impro(    
+        impros.append(Impro(
             nature=line[0].strip('"'),
             titre=line[1].strip('"'),
             nbj=line[2].strip('"'),
@@ -38,9 +38,9 @@ with codecs.open(sys.argv[1], "r", "utf-8") as f:
         ))
 
 with open("impro_out.xml", "w") as f:
-    barillet_xml = ET.Element("barillet")    
+    barillet_xml = ET.Element("barillet")
     for impro in impros:
-        print "Parsed Impro: ", impro        
+        print "Parsed Impro: ", impro
         barillet_xml.append(get_impro_element(impro))
     barillet_xml_str = ET.tostring(barillet_xml, encoding="UTF-8", method="xml")
     # Quick&dirty: add css stylesheet to xml
@@ -50,4 +50,3 @@ with open("impro_out.xml", "w") as f:
     )
     f.write(barillet_xml_str)
     f.write("\n")
-
