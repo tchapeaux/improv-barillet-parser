@@ -11,3 +11,4 @@ duree::before {content: "Durée: "; }
 duree { display: table-row; border: solid 1px; }
 divers::before {content: ""; }
 divers { display: table-row; border: solid 1px; }
+barillet { font-size: 200%; }
