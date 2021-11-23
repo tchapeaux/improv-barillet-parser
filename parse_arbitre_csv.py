@@ -13,6 +13,7 @@ def get_impro_element(impro):
     impro_xml = ET.Element("impro")
     nature_xml = ET.SubElement(impro_xml, "nature")
     nature_xml.text = impro.nature
+    nature_xml.set('isCompare', "1" if impro.nature == 'C' else "0")
     titre_xml = ET.SubElement(impro_xml, "titre")
     titre_xml.text = impro.titre
     nbj_xml = ET.SubElement(impro_xml, "nbj")

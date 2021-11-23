@@ -12,6 +12,9 @@ nature {
 	display: table-row;
 	border: solid 1px;
 }
+nature[isCompare="1"] {
+	background-color: #ddd;
+}
 titre::before {
 	content: "Titre: ";
 }
