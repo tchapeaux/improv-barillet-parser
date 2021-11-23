@@ -19,6 +19,7 @@ def get_impro_element(impro):
     nbj_xml.text = impro.nbj
     cate_xml = ET.SubElement(impro_xml, "cate")
     cate_xml.text = impro.cate
+    cate_xml.set('isLibre', "1" if impro.cate == 'L' else "0")
     duree_xml = ET.SubElement(impro_xml, "duree")
     duree_xml.text = impro.duree
     divers_xml = ET.SubElement(impro_xml, "divers")
